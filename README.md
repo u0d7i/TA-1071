@@ -13,7 +13,8 @@ FCC ID: 2A_JOTTA-1071<br>
 BV-6A 1500mAh 3.85V 5.78Wh
 
 ## Dmesg
-In normal mode
+(timestamps removed, serial nr altered)<br>
+In normal mode:
 ```
 usb 1-8: new high-speed USB device number 6 using xhci_hcd
 usb 1-8: New USB device found, idVendor=05c6, idProduct=9092, bcdDevice= 3.10
@@ -22,3 +23,13 @@ usb 1-8: Product: Android
 usb 1-8: Manufacturer: Android
 usb 1-8: SerialNumber: a012345b
 ```
+In debug mode (after entering *#*#33284#*#* and "bug" icon appears)":
+```
+usb 1-8: new high-speed USB device number 7 using xhci_hcd
+usb 1-8: New USB device found, idVendor=05c6, idProduct=9091, bcdDevice= 3.10
+usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-8: Product: Android
+usb 1-8: Manufacturer: Android
+usb 1-8: SerialNumber: a012345b
+```
+In debug mode 'adb devices' shows device as serial nr. present.

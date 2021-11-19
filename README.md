@@ -23,7 +23,7 @@ usb 1-8: Product: Android
 usb 1-8: Manufacturer: Android
 usb 1-8: SerialNumber: a012345b
 ```
-In debug mode (after entering *#*#33284#*#* and "bug" icon appears)":
+In debug mode (after entering ```*#*#33284#*#*``` and "bug" icon appears)":
 ```
 usb 1-8: new high-speed USB device number 7 using xhci_hcd
 usb 1-8: New USB device found, idVendor=05c6, idProduct=9091, bcdDevice= 3.10

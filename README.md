@@ -33,3 +33,10 @@ usb 1-8: Manufacturer: Android
 usb 1-8: SerialNumber: a012345b
 ```
 In debug mode 'adb devices' shows device as serial nr. present.
+
+## ADB
+```
+$ adb shell
+shell@Nokia 8110 4G:/ $ uname -a
+Linux localhost 3.10.49-ged30a3a-00708-ge9a40b3 #1 SMP PREEMPT Tue Jun 5 17:56:08 CST 2018 armv7l
+```

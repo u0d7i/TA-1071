@@ -12,6 +12,16 @@ FCC ID: 2A_JOTTA-1071<br>
 ## Battery
 BV-6A 1500mAh 3.85V 5.78Wh
 
+## GUI
+Settings -> Device -> Device Information:<br>
+Model: Nokia 8110 4G<br>
+Software: 11.00.17.03
+
+More Information:<br>
+OS Version: 2.5<br>
+Hardware Revision: qcom<br>
+Platform Version: 48.0a2
+
 ## Dmesg
 (timestamps removed, serial nr altered)<br>
 In normal mode:

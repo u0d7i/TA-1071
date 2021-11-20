@@ -61,3 +61,8 @@ $ adb shell
 shell@Nokia 8110 4G:/ $ uname -a
 Linux localhost 3.10.49-ged30a3a-00708-ge9a40b3 #1 SMP PREEMPT Tue Jun 5 17:56:08 CST 2018 armv7l
 ```
+
+# Recovery
+Power-off, hold arrow-up while powering on.
+
+or via adb: ```adb reboot recovery```

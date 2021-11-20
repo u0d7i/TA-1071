@@ -22,6 +22,14 @@ OS Version: 2.5<br>
 Hardware Revision: qcom<br>
 Platform Version: 48.0a2
 
+```*#0000#``` displays:<br>
+Nokia 8110 4G<br>
+11.00.17.03<br>
+18-06-05<br>
+TA-1071<br>
+(c)Nokia<br>
+Variant:23ARG05ROW1/SS<br>
+
 ## Dmesg
 (timestamps removed, serial nr altered)<br>
 In normal mode:

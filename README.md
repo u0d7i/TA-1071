@@ -42,9 +42,12 @@ usb 1-8: Product: Android
 usb 1-8: Manufacturer: Android
 usb 1-8: SerialNumber: a012345b
 ```
-In debug mode 'adb devices' shows device as serial nr. present.
 
 ## ADB
+Enable ADB access:<br>
+Dial the code ```*#*#33284#*#*```<br>
+A bug icon should appear in the taskbar, 'adb devices' shows device as serial nr. present.
+
 ```
 $ adb shell
 shell@Nokia 8110 4G:/ $ uname -a

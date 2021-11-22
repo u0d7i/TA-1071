@@ -90,8 +90,9 @@ done!
 if no error message was shown in browser after clicking the button,
 you now have adb-root -- this works until reboot
 --------------------------------------------------------------------
-
 ```
+
+Root stays untill reboot, do a factory reset to repeat.
 
 ## Backup
 Make sure you have SD card insterted (upper slot, vfat formatted (exfat formatted sd card was not recognised).

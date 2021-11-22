@@ -62,7 +62,40 @@ shell@Nokia 8110 4G:/ $ uname -a
 Linux localhost 3.10.49-ged30a3a-00708-ge9a40b3 #1 SMP PREEMPT Tue Jun 5 17:56:08 CST 2018 armv7l
 ```
 
-# Recovery
+## Recovery
 Power-off, hold arrow-up while powering on.
 
 or via adb: ```adb reboot recovery```
+
+## Root
+
+```
+$ adb push /tmp/adbroot /data/local/tmp
+$ adb shell
+shell@Nokia 8110 4G:/ $ cd /data/local/tmp
+shell@Nokia 8110 4G:/data/local/tmp $ chmod +x adbroot
+shell@Nokia 8110 4G:/data/local/tmp $ ./adbroot
+--------------------------------------------------------------------
+--- KaiOS adb-root script by speedUpLoop                         ---
+--- heavily inspired by root method of GerdaOS / Project Pris    ---
+--- by Luxferre / Nihilist                                       ---
+--------------------------------------------------------------------
+
+please open following url in phone's browser
+---------------------------------------------> http://localhost:8080
+and click the button...
+done!
+
+--------------------------------------------------------------------
+if no error message was shown in browser after clicking the button,
+you now have adb-root -- this works until reboot
+--------------------------------------------------------------------
+
+```
+
+## Backup
+Make sure you have SD card insterted (upper slot, vfat formatted (exfat formatted sd card was not recognised).
+```
+root@Nokia 8110 4G:/ # for P in $(ls /dev/block/bootdevice/by-name/); do echo "dumping $P"; dd if=/dev/block/bootdevice/by-name/$P of=/sdcard/backup/$(basename $P).img bs=2048; done
+root@Nokia 8110 4G:/ # getprop > /sdcard/backup/getprop.txt
+```

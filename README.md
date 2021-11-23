@@ -50,6 +50,18 @@ usb 1-8: Product: Android
 usb 1-8: Manufacturer: Android
 usb 1-8: SerialNumber: a012345b
 ```
+In edl mode (after 'adb reboot edl', remove the battery to exit edl mode):
+```
+usb 1-8: new high-speed USB device number 32 using xhci_hcd
+usb 1-8: New USB device found, idVendor=05c6, idProduct=9008, bcdDevice= 0.00
+usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-8: Product: QHSUSB__BULK
+usb 1-8: Manufacturer: Qualcomm CDMA Technologies MSM
+usbcore: registered new interface driver qcserial
+usbserial: USB Serial support registered for Qualcomm USB modem
+qcserial 1-8:1.0: Qualcomm USB modem converter detected
+usb 1-8: Qualcomm USB modem converter now attached to ttyUSB0
+```
 
 ## ADB
 Enable ADB access:<br>

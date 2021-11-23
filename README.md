@@ -100,3 +100,15 @@ Make sure you are root, you have SD card insterted (upper slot, vfat formatted (
 root@Nokia 8110 4G:/ # for P in $(ls /dev/block/bootdevice/by-name/); do echo "dumping $P"; dd if=/dev/block/bootdevice/by-name/$P of=/sdcard/backup/$(basename $P).img bs=2048; done
 root@Nokia 8110 4G:/ # getprop > /sdcard/backup/getprop.txt
 ```
+
+## Links
+
+* https://en.wikipedia.org/wiki/Nokia_8110_4G
+* https://gerda.tech/
+* https://wiki.bananahackers.net/
+* https://ivan-hc.github.io/bananahackers/
+* https://github.com/andybalholm/edl
+* https://edl.bananahackers.net/
+* https://4pda.to/forum/index.php?showtopic=890710 (ru)
+* https://4pda.to/forum/index.php?showtopic=950670 (ru)
+* https://4pda.to/forum/index.php?showtopic=975097 (ru)

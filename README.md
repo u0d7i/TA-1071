@@ -144,3 +144,4 @@ root@Nokia 8110 4G:/ # cp /data/fota/downloaded/update.zip /sdcard/update/
 * https://github.com/Zalexanninev15/emmcdl
 * https://github.com/Zalexanninev15/PFT-Linux
 * https://anantamaha.com/how-to-backup-firmware-from-qualcomm-android-using-qfil/
+* https://wiki.bananahackers.net/development/edl

@@ -124,3 +124,10 @@ root@Nokia 8110 4G:/ # getprop > /sdcard/backup/getprop.txt
 * https://4pda.to/forum/index.php?showtopic=890710 (ru)
 * https://4pda.to/forum/index.php?showtopic=950670 (ru)
 * https://4pda.to/forum/index.php?showtopic=975097 (ru)
+
+### EDL research
+* https://github.com/bkerler/edl/
+* https://bkerler.github.io/2020/08/03/bring-light-to-the-darkness-p3/
+* https://github.com/Zalexanninev15/emmcdl
+* https://github.com/Zalexanninev15/PFT-Linux
+* https://anantamaha.com/how-to-backup-firmware-from-qualcomm-android-using-qfil/

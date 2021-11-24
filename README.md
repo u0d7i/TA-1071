@@ -113,6 +113,19 @@ root@Nokia 8110 4G:/ # for P in $(ls /dev/block/bootdevice/by-name/); do echo "d
 root@Nokia 8110 4G:/ # getprop > /sdcard/backup/getprop.txt
 ```
 
+## OTA Update
+
+```
+root@Nokia 8110 4G:/ # ls -al /data/fota/downloaded/
+-rw------- root     root     39233538 2021-11-24 10:54 update.zip
+
+root@Nokia 8110 4G:/ # md5sum /data/fota/downloaded/update.zip                 
+6689c479fff18e7f61d3e98d1efcbe72  /data/fota/downloaded/update.zip
+
+root@Nokia 8110 4G:/ # mkdir /sdcard/update
+root@Nokia 8110 4G:/ # cp /data/fota/downloaded/update.zip /sdcard/update/
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

@@ -134,6 +134,7 @@ root@Nokia 8110 4G:/ # cp /data/fota/downloaded/update.zip /sdcard/update/
 * https://ivan-hc.github.io/bananahackers/
 * https://github.com/andybalholm/edl
 * https://edl.bananahackers.net/
+* https://groups.google.com/g/bananahackers
 * https://4pda.to/forum/index.php?showtopic=890710 (ru)
 * https://4pda.to/forum/index.php?showtopic=950670 (ru)
 * https://4pda.to/forum/index.php?showtopic=975097 (ru)

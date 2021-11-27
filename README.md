@@ -128,6 +128,11 @@ root@Nokia 8110 4G:/ # mkdir /sdcard/update
 root@Nokia 8110 4G:/ # cp /data/fota/downloaded/update.zip /sdcard/update/
 ```
 
+## EDL
+Enter EDL mode by:
+* from powered off device hold Up + Down and instert USB cable (screen blinks and goes blank)
+* from adb: 'adb reboot edl'
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

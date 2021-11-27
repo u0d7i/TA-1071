@@ -1,6 +1,8 @@
 # TA-1071
 TA-1071 Nokia 8110 4G Single-SIM Europe
 
+![TA-1071 Nokia 8110 4G Single-SIM Europe](img/nokia-8110-4g-single-sim-ta-1071.jpg?raw=true "TA-1071 Nokia 8110 4G Single-SIM Europe")
+
 ## Under the cover
 CODE: 23ARG05ROW1<br>
 IMEI: 3544760900XXXXX<br>

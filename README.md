@@ -186,6 +186,18 @@ Reset succeeded.
 
 ```
 
+NOTE: Unfortunately, you must restart the phone after each edl command except reset, because an attempt to executing edl command second time fails with ``Mode detected: Unknown``, despite phone still appearing in edl mode:
+
+```
+Using loader 8110.mbn ...
+Waiting for the device
+Device detected :)
+Mode detected: Unknown
+Sorry, couldn't talk to Sahara, please reboot the device !
+
+```
+Disconnect and remove the battery to exit.
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

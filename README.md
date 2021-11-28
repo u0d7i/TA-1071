@@ -198,6 +198,22 @@ Sorry, couldn't talk to Sahara, please reboot the device !
 ```
 Disconnect and remove the battery to exit.
 
+## EDL backup
+
+Power-off the phone, boot to recovery by holding "Up" while pressing "Power",
+then "Wipe cache partition", then "Wipe data/factory reset", then "power off".
+Boot to edl, by holding Up + Down while pressing "Power". Execute edl commands, resetting phone manually after each, as per above.
+
+```
+$ python3.7 edl.py -loader 8110.mbn -rf backup/full_backup.img
+$ python3.7 edl.py -loader 8110.mbn -printgpt | tee -a backup/printgpt.out
+$ python3.7 edl.py -loader 8110.mbn -gpt backup/gpt.img
+$ python3.7 edl.py -loader 8110.mbn -r recovery backup/recovery.img
+$ python3.7 edl.py -loader 8110.mbn -r system backup/system.img
+$ python3.7 edl.py -loader 8110.mbn -r modem backup/modem.img
+...
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

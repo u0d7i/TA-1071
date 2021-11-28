@@ -109,7 +109,7 @@ you now have adb-root -- this works until reboot
 Root stays untill reboot, do a factory reset to repeat.
 
 ## Backup
-Make sure you are root, you have SD card insterted (upper slot, vfat formatted (exfat formatted sd card was not recognised).
+Make sure you are root, you have SD card insterted (upper slot, vfat formatted, exfat formatted sd card was not recognised).
 ```
 root@Nokia 8110 4G:/ # for P in $(ls /dev/block/bootdevice/by-name/); do echo "dumping $P"; dd if=/dev/block/bootdevice/by-name/$P of=/sdcard/backup/$(basename $P).img bs=2048; done
 root@Nokia 8110 4G:/ # getprop > /sdcard/backup/getprop.txt

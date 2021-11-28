@@ -133,6 +133,32 @@ Enter [EDL](https://en.wikipedia.org/wiki/Qualcomm_EDL_mode) mode by:
 * from powered off device hold Up + Down and instert USB cable (screen blinks and goes blank)
 * from adb: 'adb reboot edl'
 
+The [knowlingly working edl tool](https://github.com/andybalholm/edl) requires Python 3.7,
+but at the time of writting default Debian Python version is 3.9.
+We'll be using [pyenv](https://github.com/pyenv/pyenv) to install 3.7.
+
+Prepare the env:
+
+```
+$ curl https://pyenv.run | bash
+$ export PATH="$HOME/.pyenv/bin:$PATH"
+$ eval "$(pyenv init --path)"
+$ eval "$(pyenv virtualenv-init -)"
+
+$ pyenv versions
+$ pyenv install 3.7.12
+$ pyenv global 3.7.12
+$ pip3.7 install pyusb pyserial capstone keystone-engine
+
+$ git clone https://github.com/andybalholm/edl
+$ cd edl/
+$ sudo cp 51-edl.rules /etc/udev/rules.d/
+$ sudo cp 50-android.rules /etc/udev/rules.d/
+$ sudo udevadm control -R
+$ echo "blacklist qcserial" | sudo tee -a /etc/modprobe.d/blacklist.conf
+$ wget -c https://edl.bananahackers.net/loaders/8110.mbn
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

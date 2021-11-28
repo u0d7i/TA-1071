@@ -130,7 +130,7 @@ root@Nokia 8110 4G:/ # cp /data/fota/downloaded/update.zip /sdcard/update/
 
 ## EDL
 Enter [EDL](https://en.wikipedia.org/wiki/Qualcomm_EDL_mode) mode by:
-* from powered off device hold Up + Down and instert USB cable (screen blinks and goes blank)
+* from powered off device hold Up + Down and instert USB cable or hold power-on, (screen blinks and goes blank)
 * from adb: 'adb reboot edl'
 
 The [knowlingly working edl tool](https://github.com/andybalholm/edl) requires Python 3.7,

@@ -186,7 +186,7 @@ Reset succeeded.
 
 ```
 
-NOTE: Unfortunately, you must restart the phone after each edl command except reset, because an attempt to executing edl command second time fails with ``Mode detected: Unknown``, despite phone still appearing in edl mode:
+NOTE: Unfortunately, you must restart the phone after each edl command except reset, because an attempt to execute edl command second time fails with ``Mode detected: Unknown``, despite phone still appearing in edl mode:
 
 ```
 Using loader 8110.mbn ...

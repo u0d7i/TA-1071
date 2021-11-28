@@ -159,6 +159,33 @@ $ echo "blacklist qcserial" | sudo tee -a /etc/modprobe.d/blacklist.conf
 $ wget -c https://edl.bananahackers.net/loaders/8110.mbn
 ```
 
+Test if edl tool is working:
+
+```
+$ python3.7 edl.py -loader 8110.mbn  -reset
+
+Qualcomm Sahara / Firehose Client (c) B.Kerler 2018-2019.
+
+
+Using loader 8110.mbn ...
+Waiting for the device
+........Device detected :)
+Mode detected: Sahara
+
+------------------------
+HWID:              0x000940e100420050 (MSM_ID:0x000940e1,OEM_ID:0x0042,MODEL_ID:0x0050)
+PK_HASH:           0x1357fdaeabb7becbe49095f000d9d3dadf198885106d98598cac6d1b9b2edb3a
+Serial:            0xa012345b
+SBL Version:       0x00000000
+
+Successfully uploaded programmer :)
+TargetName=MSM8909
+MemoryName=eMMC
+Version=1
+Reset succeeded.
+
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

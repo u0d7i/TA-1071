@@ -214,6 +214,12 @@ $ python3.7 edl.py -loader 8110.mbn -r modem backup/modem.img
 ...
 ```
 
+## EDL restore
+
+```
+$ python3.7 edl.py -loader 8110.mbn -ws 0 backup/full_backup.img
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

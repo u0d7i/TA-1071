@@ -232,6 +232,7 @@ $ python3.7 edl.py -loader 8110.mbn -ws 0 backup/full_backup.img
 * https://4pda.to/forum/index.php?showtopic=890710 (ru)
 * https://4pda.to/forum/index.php?showtopic=950670 (ru)
 * https://4pda.to/forum/index.php?showtopic=975097 (ru)
+* https://mis.pm/banana-hack
 
 ### EDL research
 * https://github.com/bkerler/edl/

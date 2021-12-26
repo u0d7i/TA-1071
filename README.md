@@ -128,6 +128,8 @@ root@Nokia 8110 4G:/ # mkdir /sdcard/update
 root@Nokia 8110 4G:/ # cp /data/fota/downloaded/update.zip /sdcard/update/
 ```
 
+After the OTA update the latest firmware version for this model is 17.00.17.01 .
+
 ## EDL
 Enter [EDL](https://en.wikipedia.org/wiki/Qualcomm_EDL_mode) mode by:
 * from powered off device hold Up + Down and instert USB cable or hold power-on, (screen blinks and goes blank)

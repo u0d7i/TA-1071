@@ -81,7 +81,7 @@ Power-off, hold arrow-up while powering on.
 
 or via adb: ```adb reboot recovery```
 
-## Root
+## Stock Root
 
 ```
 $ adb push /tmp/adbroot /data/local/tmp
@@ -108,7 +108,7 @@ you now have adb-root -- this works until reboot
 
 Root stays untill reboot, do a factory reset to repeat.
 
-## Backup
+## ADB Backup
 Make sure you are root, you have SD card insterted (upper slot, vfat formatted, exfat formatted sd card was not recognised).
 ```
 root@Nokia 8110 4G:/ # for P in $(ls /dev/block/bootdevice/by-name/); do echo "dumping $P"; dd if=/dev/block/bootdevice/by-name/$P of=/sdcard/backup/$(basename $P).img bs=2048; done

@@ -255,10 +255,25 @@ $ python3.7 edl.py -loader 8110.mbn -ws 0 backup/full_backup.img
 
 ## Install
 
+Being able to install apps in KaiOS always involves using WebIDE API at lesat in the initial stages.
+Classical way is using an old version of Firefox (59 or earlier) or Pale Moon  (28.6.1 or earlier),
+or use the official Kaios emulator (KaiOSRT).
+Alternatively you can use other command line development tools like
+[XPCshell from XULRunner](https://github.com/jkelol111/make-kaios-install),
+or [Gdeploy](https://gitlab.com/suborg/gdeploy), that uses NodeJS.
+The easiest way for me was using kaios-app-installer docker image:
+
+Enable debug mode by entering ```*#*#33284#*#*```, and connect phone via usb.
+
+
 ```
 $ git clone https://github.com/vkentta/kaios-app-installer
 $ cd kaios-app-installer/
 $ docker build -f Dockerfile -t vkentta/kaios-app-installer .
+$ cd example_app/
+$ sudo adb kill-server
+$ docker run --rm -v `pwd`:/app-src --device=/dev/bus/usb:/dev/bus/usb vkentta/kaios-app-installer install_packaged
+
 ```
 
 ## Links

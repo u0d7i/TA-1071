@@ -130,6 +130,37 @@ root@Nokia 8110 4G:/ # cp /data/fota/downloaded/update.zip /sdcard/update/
 
 After the OTA update the latest firmware version for this model is 17.00.17.01 .
 
+Also, usb product ID changes in dmesg:
+
+```
+usb 1-8: new high-speed USB device number 24 using xhci_hcd
+usb 1-8: New USB device found, idVendor=05c6, idProduct=900e, bcdDevice= 3.10
+usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-8: Product: Android
+usb 1-8: Manufacturer: Android
+usb 1-8: SerialNumber: a012345b
+usb 1-8: USB disconnect, device number 24
+usb 1-8: new high-speed USB device number 25 using xhci_hcd
+usb 1-8: New USB device found, idVendor=05c6, idProduct=f003, bcdDevice= 3.10
+usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-8: Product: Android
+usb 1-8: Manufacturer: Android
+usb 1-8: SerialNumber: a012345b
+
+```
+
+After doing "Settings -> Storage -> USB Storage -> Disabled":
+
+```
+usb 1-8: USB disconnect, device number 25
+usb 1-8: new high-speed USB device number 26 using xhci_hcd
+usb 1-8: New USB device found, idVendor=05c6, idProduct=900e, bcdDevice= 3.10
+usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-8: Product: Android
+usb 1-8: Manufacturer: Android
+usb 1-8: SerialNumber: a012345b
+```
+
 ## EDL
 Enter [EDL](https://en.wikipedia.org/wiki/Qualcomm_EDL_mode) mode by:
 * from powered off device hold Up + Down and instert USB cable or hold power-on, (screen blinks and goes blank)
@@ -220,6 +251,14 @@ $ python3.7 edl.py -loader 8110.mbn -r modem backup/modem.img
 
 ```
 $ python3.7 edl.py -loader 8110.mbn -ws 0 backup/full_backup.img
+```
+
+## Install
+
+```
+$ git clone https://github.com/vkentta/kaios-app-installer
+$ cd kaios-app-installer/
+$ docker build -f Dockerfile -t vkentta/kaios-app-installer .
 ```
 
 ## Links

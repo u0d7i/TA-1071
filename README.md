@@ -261,7 +261,7 @@ or use the official Kaios emulator (KaiOSRT).
 Alternatively you can use other command line development tools like
 [XPCshell from XULRunner](https://github.com/jkelol111/make-kaios-install),
 or [Gdeploy](https://gitlab.com/suborg/gdeploy), that uses NodeJS.
-The easiest way for me was using kaios-app-installer docker image:
+The easiest way for me was using [kaios-app-installer docker image](https://github.com/vkentta/kaios-app-installer):
 
 Enable debug mode by entering ```*#*#33284#*#*```, and connect phone via usb.
 
@@ -272,7 +272,10 @@ $ cd kaios-app-installer/
 $ docker build -f Dockerfile -t vkentta/kaios-app-installer .
 $ cd example_app/
 $ sudo adb kill-server
-$ docker run --rm -v `pwd`:/app-src --device=/dev/bus/usb:/dev/bus/usb vkentta/kaios-app-installer install_packaged
+$ docker run --rm -v `pwd`:/app-src --device=/dev/bus/usb:/dev/bus/usb vkentta/kaios-app-installer install_packagead
+
+$ alias kaios-app-installer='docker run --rm -v `pwd`:/app-src --device=/dev/bus/usb:/dev/bus/usb vkentta/kaios-app-installer install_packaged'
+$ kaios-app-installer
 
 ```
 

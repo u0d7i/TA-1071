@@ -279,6 +279,16 @@ $ kaios-app-installer
 
 ```
 
+But then I've crafted a dirty Dockerfile for gdeploy and used it the same way:
+
+```
+$ curl https://raw.githubusercontent.com/u0d7i/TA-1071/master/gdeploy/Dockerfile | docker build --rm -t gdeploy -
+$ sudo adb kill-server
+$ docker run --rm --device=/dev/bus/usb:/dev/bus/usb gdeploy list
+$ alias gdeploy='docker run --rm --device=/dev/bus/usb:/dev/bus/usb gdeploy'
+$ gdeploy
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

@@ -289,6 +289,14 @@ $ alias gdeploy='docker run --rm --device=/dev/bus/usb:/dev/bus/usb gdeploy'
 $ gdeploy
 ```
 
+## Temporarily root
+
+Install [Wallace Toolbox](https://gitlab.com/suborg/wallace-toolbox) as per above:
+```
+$ git clone https://gitlab.com/suborg/wallace-toolbox
+$ gdeploy install wallace-toolbox
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

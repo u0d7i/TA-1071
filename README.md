@@ -297,6 +297,8 @@ $ git clone https://gitlab.com/suborg/wallace-toolbox
 $ gdeploy install wallace-toolbox
 ```
 
+![wallace-toolbox](img/wallace-toolbox.jpeg?raw=true "wallace-toolbox")
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

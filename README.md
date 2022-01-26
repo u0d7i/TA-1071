@@ -299,6 +299,17 @@ $ gdeploy install wallace-toolbox
 
 ![wallace-toolbox](img/wallace-toolbox.png?raw=true "wallace-toolbox")
 
+## Recovery
+
+```
+$ sudo apt install abootimg
+$ mkdir recovery
+$ cd recovery/
+$ cp ../backup_edl_ota_17.00.17.01/partitions/recovery.img .
+$ abootimg -x recovery.img
+$ abootimg-unpack-initrd
+```
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

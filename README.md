@@ -309,6 +309,39 @@ $ cp ../backup_edl_ota_17.00.17.01/partitions/recovery.img .
 $ abootimg -x recovery.img
 $ abootimg-unpack-initrd
 ```
+Mods:
+
+```
+$ curl https://gitlab.com/project-pris/recovery/-/raw/master/src/8110/root/res/keys > ramdisk/res/keys
+$ curl https://gitlab.com/project-pris/recovery/-/raw/master/src/8110/root/sbin/adbd > ramdisk/sbin/adbd
+$ curl https://gitlab.com/project-pris/recovery/-/raw/master/src/8110/root/sbin/busybox > ramdisk/sbin/busybox
+$ chmod +x ramdisk/sbin/busybox
+$ mkdir -p ramdisk/system/bin
+$ for util in $(curl https://gitlab.com/project-pris/recovery/-/raw/master/bbutils.txt); do ln -sf /sbin/busybox ramdisk/system/bin/${util}; done
+$ sed -i -e '/ro.debuggable=/s/=.*/=1/' ramdisk/default.prop
+$ rm initrd.img
+$ abootimg-pack-initrd
+$ abootimg -u recovery.img -r initrd.img
+$ adb reboot ed
+$ python3.7 ../edl/edl.py -loader ../edl/8110.mbn -w recovery recovery.img
+```
+
+```
+usb 1-8: new high-speed USB device number 56 using xhci_hcd
+usb 1-8: New USB device found, idVendor=18d1, idProduct=d001, bcdDevice= 3.10
+usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-8: Product: Nokia 8110 4G
+usb 1-8: Manufacturer: QUALCOMM
+usb 1-8: SerialNumber: a012345b
+
+$ adb devices
+List of devices attached
+a012345b        recovery
+
+$ adb shell
+/ #
+```
+
 
 ## Links
 

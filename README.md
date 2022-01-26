@@ -322,7 +322,10 @@ $ sed -i -e '/ro.debuggable=/s/=.*/=1/' ramdisk/default.prop
 $ rm initrd.img
 $ abootimg-pack-initrd
 $ abootimg -u recovery.img -r initrd.img
-$ adb reboot ed
+```
+
+```
+$ adb reboot edl
 $ python3.7 ../edl/edl.py -loader ../edl/8110.mbn -w recovery recovery.img
 ```
 

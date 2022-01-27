@@ -345,6 +345,26 @@ $ adb shell
 / #
 ```
 
+"Mount /system"
+
+
+```
+/ # mount -o remount,rw /system
+
+/ # cat /system/bin/install-recovery.sh
+#!/system/bin/sh
+if ! applypatch -c EMMC:/dev/block/bootdevice/by-name/recovery:15644672:c753aa63159fbd86238964e0a46c8597ad3a2d80; then
+  applypatch -b /system/etc/recovery-resource.dat EMMC:/dev/block/bootdevice/by-name/boot:14774272:a4e96b2556bb82dd2c58fe71aa4c806f5129defa EMMC:/dev/block/bootdevice/by-name/recovery c753aa63159fbd86238964e0a46c8597ad3a2d80 15644672 a4e96b2556bb82dd2c58fe71aa4c806f5129defa:/system/recovery-from-boot.p && log -t recovery "Installing new recovery image: succeeded" || log -t recovery "Installing new recovery image: failed"
+else
+  log -t recovery "Recovery image already installed"
+fi
+
+/ # echo '#!/system/bin/sh' > /system/bin/install-recovery.sh
+/ # echo 'exit 0' >> /system/bin/install-recovery.sh
+
+/ # mount -o remount,ro /system
+```
+
 
 ## Links
 

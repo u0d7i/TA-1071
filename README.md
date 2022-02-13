@@ -366,6 +366,12 @@ fi
 ```
 
 
+## Baseband
+Have you ever wondered how and what your phone modem talks to mobile network?
+
+[QCSuper](https://github.com/P1sec/QCSuper) is your friend. P1sec has very handy [blog post/demo](https://labs.p1sec.com/2019/07/09/presenting-qcsuper-a-tool-for-capturing-your-2g-3g-4g-air-traffic-on-qualcomm-based-phones/).
+
+
 ## Links
 
 * https://en.wikipedia.org/wiki/Nokia_8110_4G

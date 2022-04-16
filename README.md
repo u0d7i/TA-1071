@@ -373,6 +373,7 @@ Have you ever wondered how and what your phone modem talks to mobile network?
 ## Development
 * [KaiOS dev docs](https://developer.kaiostech.com/docs/)
 * [Simulator](https://developer.kaiostech.com/docs/getting-started/env-setup/simulator/)
+* [PaleMoon 28.6.1](http://archive.palemoon.org/palemoon/28.x/28.6.1/) (remove updater after extract)
 * [@bananahackers](https://sites.google.com/view/bananahackers/development/)
 
 ## Links
